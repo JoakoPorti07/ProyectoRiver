@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header{
     background-color: #900000;
@@ -21,12 +24,16 @@ header{
     font-weight: bold;
     font: 18px Arial, sans-serif;
 }
+.nav:hover{
+    text-decoration: underline;
+
+}
 footer {
     background-color: #900000;
     color: white;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    margin-bottom: 0;
+    margin-top: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
