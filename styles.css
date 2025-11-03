@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header{
+    background-color: #900000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.TituloPag{
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+.nav{
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+    font: 18px Arial, sans-serif;
+}
