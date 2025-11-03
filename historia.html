@@ -3,42 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Historia de River Plate</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* --- Galería tipo Pinterest --- */
+        .galeria {
+            column-count: 3;
+            column-gap: 15px;
+            padding: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .galeria { column-count: 2; }
+        }
+
+        @media (max-width: 600px) {
+            .galeria { column-count: 1; }
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            break-inside: avoid;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            display: block;
+        }
+
+        .tarjeta p {
+            padding: 10px;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .titulo-galeria {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 40px;
+            color: #c8102e;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1 class="TituloPag">RIVER PLATE</h1>
-        <!--Navegador-->
         <nav>
-                <a href="index.html" class="nav">Inicio</a>
-                <a href="historia.html" class="nav">Historia</a>
-                <a href="jugadores.html" class="nav">Jugadores</a>
-                <a href="contacto.html" class="nav">Contacto</a>
-                <a href="login.html" class="nav">Socio Login</a>
+            <a href="index.html" class="nav">Inicio</a>
+            <a href="historia.html" class="nav">Historia</a>
+            <a href="jugadores.html" class="nav">Jugadores</a>
+            <a href="contacto.html" class="nav">Contacto</a>
+            <a href="login.html" class="nav">Socio Login</a>
         </nav>
-        <h1>Galería — Historia de River Plate</h1>
-        <p>El Club Atlético River Plate fue fundado el 25 de mayo de 1901 en el barrio de La Boca, Buenos Aires, tras la fusión de dos equipos locales llamados Santa Rosa y La Rosales. Su nombre, “River Plate”, proviene de la traducción inglesa del Río de la Plata, que los fundadores vieron escrito en unos cajones del puerto. En sus comienzos fue un club humilde que disputaba campeonatos locales, hasta que en 1908 logró el ascenso a la Primera División del fútbol argentino, iniciando un camino que con el tiempo lo convertiría en una de las instituciones deportivas más grandes de Sudamérica y del mundo.
-
-Durante la década de 1930, River comenzó a destacarse tanto dentro como fuera del campo. El club se ganó el apodo de “Los Millonarios” tras realizar costosos fichajes como los de Carlos Peucelle y Bernabé Ferreyra, algo inusual en aquella época. Este período marcó el comienzo de su grandeza deportiva y económica. Hacia fines de esa década, el club ya contaba con un fútbol ofensivo y vistoso que lo distinguía del resto de los equipos argentinos.
-
-En los años 40, River alcanzó su primera edad de oro con la aparición de “La Máquina”, una delantera histórica conformada por Juan Carlos Muñoz, José Manuel Moreno, Adolfo Pedernera, Ángel Labruna y Félix Loustau. Este conjunto revolucionó el fútbol por su estilo colectivo, movilidad y precisión, y es considerado uno de los mejores equipos de todos los tiempos. Durante esa década, River conquistó varios campeonatos locales y consolidó su fama de club elegante y ofensivo.
-
-En 1938, el club inauguró su nuevo estadio en el barrio de Núñez, conocido como el Estadio Monumental Antonio Vespucio Liberti, en honor a uno de sus presidentes más importantes. Con capacidad para más de 80.000 personas, el Monumental se transformó en el escenario principal del fútbol argentino y en el hogar de grandes momentos de la historia deportiva nacional.
-
-Durante las décadas de 1950 a 1970, River continuó siendo protagonista del fútbol argentino, aunque atravesó algunos períodos sin títulos. Aun así, el club siguió formando grandes jugadores como Amadeo Carrizo, Ermindo Onega y Norberto Alonso. En los 70 y 80, figuras como Daniel Passarella y Enzo Francescoli devolvieron al club su brillo competitivo. En 1986, bajo la dirección técnica de Héctor “Bambino” Veira, River conquistó por primera vez la Copa Libertadores de América y la Copa Intercontinental, derrotando al Steaua Bucarest, lo que significó su consagración definitiva en el plano internacional.
-
-En los años 90, River mantuvo su protagonismo con un equipo lleno de talentos surgidos de su cantera, conocida como “Las Inferiores”, de donde salieron jugadores como Ariel Ortega, Hernán Crespo, Marcelo Gallardo y Pablo Aimar. En 1996 y 1997, el equipo dirigido por Ramón Díaz conquistó nuevamente la Copa Libertadores y varios títulos nacionales, reafirmando su estilo ofensivo y su poderío futbolístico.
-
-En 2011, River vivió uno de los momentos más difíciles de su historia al descender por primera vez a la Primera B Nacional. Sin embargo, el club regresó rápidamente a Primera en 2012, demostrando su grandeza y el apoyo incondicional de sus hinchas.
-
-Dos años más tarde, comenzó una de las etapas más exitosas de su historia con la llegada de Marcelo Gallardo como entrenador. Bajo su conducción, River ganó numerosos títulos nacionales e internacionales, incluyendo la Copa Sudamericana 2014, las Copas Libertadores 2015 y 2018, y las Recopas Sudamericanas. La victoria en la final de la Libertadores 2018 ante Boca Juniors en Madrid es considerada el punto más alto de su historia reciente y uno de los partidos más recordados del fútbol mundial.
-
-Hoy, River Plate es reconocido como el club más ganador del fútbol argentino, con más de 70 títulos oficiales entre competencias nacionales e internacionales. Su estadio, su escuela de fútbol, su estilo ofensivo y su enorme masa de hinchas lo convierten en un verdadero símbolo del deporte argentino. El lema que mejor lo representa es el que muchos de sus fanáticos repiten con orgullo: “River es el más grande, lejos.”</p>
     </header>
-   
+
+    <h1>Historia de River Plate</h1>
+    <p>
+        El Club Atlético River Plate fue fundado el 25 de mayo de 1901 en el barrio de La Boca, Buenos Aires, tras la fusión de dos equipos locales llamados Santa Rosa y La Rosales. Su nombre, “River Plate”, proviene de la traducción inglesa del Río de la Plata, que los fundadores vieron escrito en unos cajones del puerto. En sus comienzos fue un club humilde que disputaba campeonatos locales, hasta que en 1908 logró el ascenso a la Primera División del fútbol argentino, iniciando un camino que con el tiempo lo convertiría en una de las instituciones deportivas más grandes de Sudamérica y del mundo.
+
+        Durante la década de 1930, River comenzó a destacarse tanto dentro como fuera del campo. El club se ganó el apodo de “Los Millonarios” tras realizar costosos fichajes como los de Carlos Peucelle y Bernabé Ferreyra, algo inusual en aquella época. Este período marcó el comienzo de su grandeza deportiva y económica. Hacia fines de esa década, el club ya contaba con un fútbol ofensivo y vistoso que lo distinguía del resto de los equipos argentinos.
+
+        En los años 40, River alcanzó su primera edad de oro con la aparición de “La Máquina”, una delantera histórica conformada por Juan Carlos Muñoz, José Manuel Moreno, Adolfo Pedernera, Ángel Labruna y Félix Loustau. Este conjunto revolucionó el fútbol por su estilo colectivo, movilidad y precisión, y es considerado uno de los mejores equipos de todos los tiempos. Durante esa década, River conquistó varios campeonatos locales y consolidó su fama de club elegante y ofensivo.
+
+        En 1938, el club inauguró su nuevo estadio en el barrio de Núñez, conocido como el Estadio Monumental Antonio Vespucio Liberti, en honor a uno de sus presidentes más importantes. Con capacidad para más de 80.000 personas, el Monumental se transformó en el escenario principal del fútbol argentino y en el hogar de grandes momentos de la historia deportiva nacional.
+
+        Durante las décadas de 1950 a 1970, River continuó siendo protagonista del fútbol argentino, aunque atravesó algunos períodos sin títulos. Aun así, el club siguió formando grandes jugadores como Amadeo Carrizo, Ermindo Onega y Norberto Alonso. En los 70 y 80, figuras como Daniel Passarella y Enzo Francescoli devolvieron al club su brillo competitivo. En 1986, bajo la dirección técnica de Héctor “Bambino” Veira, River conquistó por primera vez la Copa Libertadores de América y la Copa Intercontinental, derrotando al Steaua Bucarest, lo que significó su consagración definitiva en el plano internacional.
+
+        En los años 90, River mantuvo su protagonismo con un equipo lleno de talentos surgidos de su cantera, conocida como “Las Inferiores”, de donde salieron jugadores como Ariel Ortega, Hernán Crespo, Marcelo Gallardo y Pablo Aimar. En 1996 y 1997, el equipo dirigido por Ramón Díaz conquistó nuevamente la Copa Libertadores y varios títulos nacionales, reafirmando su estilo ofensivo y su poderío futbolístico.
+
+        En 2011, River vivió uno de los momentos más difíciles de su historia al descender por primera vez a la Primera B Nacional. Sin embargo, el club regresó rápidamente a Primera en 2012, demostrando su grandeza y el apoyo incondicional de sus hinchas.
+
+        Dos años más tarde, comenzó una de las etapas más exitosas de su historia con la llegada de Marcelo Gallardo como entrenador. Bajo su conducción, River ganó numerosos títulos nacionales e internacionales, incluyendo la Copa Sudamericana 2014, las Copas Libertadores 2015 y 2018, y las Recopas Sudamericanas. La victoria en la final de la Libertadores 2018 ante Boca Juniors en Madrid es considerada el punto más alto de su historia reciente y uno de los partidos más recordados del fútbol mundial.
+
+        Hoy, River Plate es reconocido como el club más ganador del fútbol argentino, con más de 70 títulos oficiales entre competencias nacionales e internacionales. Su estadio, su escuela de fútbol, su estilo ofensivo y su enorme masa de hinchas lo convierten en un verdadero símbolo del deporte argentino. El lema que mejor lo representa es el que muchos de sus fanáticos repiten con orgullo: “River es el más grande, lejos.”
+    </p>
+
+    <!-- Galería de imágenes tipo Pinterest -->
+    <h2 class="titulo-galeria">Galería de momentos históricos</h2>
+    <section class="galeria">
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 111007.png" alt="Estadio Monumental">
+            <p><strong>1938:</strong> Inauguración del Estadio Monumental, emblema de River y del fútbol argentino.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 111236.png" alt="La Máquina de River">
+            <p><strong>Década del 40:</strong> La Máquina, una delantera mítica que marcó época en el fútbol mundial.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 111504.png" alt="Bernabé Ferreyra">
+            <p><strong>1930s:</strong> Bernabé Ferreyra, ídolo y símbolo del apodo “Los Millonarios”.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 111634.png" alt="Copa Libertadores 1986">
+            <p><strong>1986:</strong> River gana su primera Copa Libertadores e Intercontinental.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 181338.png" alt="Enzo Francescoli">
+            <p><strong>1990s:</strong> Enzo Francescoli, ídolo y símbolo de elegancia dentro y fuera del campo.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 181528.png" alt="Marcelo Gallardo">
+            <p><strong>Era Gallardo:</strong> El técnico más exitoso de la historia moderna de River Plate.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 181806.png" alt="Final de Madrid 2018">
+            <p><strong>2018:</strong> River vence a Boca en Madrid y conquista una Libertadores histórica.</p>
+        </div>
+        <div class="tarjeta">
+            <img src="Captura de pantalla 2025-11-03 182044.png" alt="Museo River Plate">
+            <p><strong>Actualidad:</strong> El Museo River conserva los mayores logros y recuerdos del club.</p>
+        </div>
+    </section>
+
     <footer>
-        <p> 2025 RIVER PLATE. Todos los derechos reservados.</p>
+        <p>2025 RIVER PLATE. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
