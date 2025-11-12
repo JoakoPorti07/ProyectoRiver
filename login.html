@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIVER PLATE - LOGIN</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
     <header>
@@ -20,7 +21,8 @@
     </header>
     <!--Login Socio-->
     <main>
-        <section>
+        <section class="formularologin">
+            <h1 class="titulopaginalogin">Login River</h1>
             <h2 class="loginTitulo">Login de Socios</h2>
             <form action="#" method="post">
                 <label for="socioID">ID de Socio:</label><br>
@@ -33,6 +35,28 @@
                 <input type="reset" value="Borrar">
             </form>
         </section>
+        <!--registro-->
+        <section class="formularoregis">
+            <h1 class="titulopaginaregis">Registro River</h1>
+            <h2 class="registroTitulo">¿No eres socio? Regístrate aquí</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="telefono">Número de Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+                
+                <label for="nuevaContrasena">Crear Contraseña:</label><br>
+                <input type="password" id="nuevaContrasena" name="nuevaContrasena" required><br><br>
+                
+                <input type="submit" value="Registrarse">
+                <input type="reset" value="Borrar">
+            </form>
+        </section>
+
     </main>
 
 
