@@ -3,28 +3,24 @@
     color: #ffffff;
     background-color: #d40000;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0px;
     font-size: 24px;
-    margin-bottom: 20px;
-}
-.loginTitulo {
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 28px;
-    color: #900000;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 form {
     background-color: #ffffff;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    width: 450px;
 }
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"], textarea, input[type="tel"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -57,13 +53,21 @@ input[type="submit"]:hover {
     padding: 10px;
     border-radius: 5px;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    margin-top: 50px;
 }
-.formularologin, .formularoregis {
-    max-width: 400px;
+.formularoregis {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+
+}
+.mainlogin {
+    margin-bottom: 50px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 0 auto;
-    
+    flex-direction: row;
+    justify-content: center;
+    gap: 250px;
 }
