@@ -1,0 +1,36 @@
+.jugadoresTitulo{
+    text-align: center;
+    font-size: 28px;
+    color: #900000;
+    margin-top: 20px;
+}
+.listadestacados {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333333;
+}
+.jugadoresdestacados {
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.tablaprimeradivision {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.tablaprimeradivision th, .tablaprimeradivision td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+.tablaprimeradivision th {
+    background-color: #900000;
+    color: white;
+    font-weight: bold;
+}
+.tablaprimeradivision tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
