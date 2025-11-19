@@ -132,3 +132,13 @@ input[type="reset"]:hover {
         gap: 60px;
     }
 }
+section {
+    overflow: hidden;
+    border-radius: 12px;
+}
+section {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: transparent;
+}
+
