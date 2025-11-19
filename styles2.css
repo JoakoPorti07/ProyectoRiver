@@ -1,73 +1,134 @@
+/* ---- TITULOS LOGIN / REGISTRO ---- */
+
 .titulopaginalogin {
     text-align: center;
     color: #ffffff;
-    background-color: #d40000;
-    padding: 10px;
-    border-radius: 0px;
-    font-size: 24px;
-    margin-bottom: 0px;
-}
-form {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 0px;
-    width: 450px;
-}
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-input[type="text"], input[type="password"], input[type="email"], textarea, input[type="tel"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input[type="submit"], input[type="reset"] {
     background-color: #900000;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 14px 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 26px;
     font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
-input[type="submit"]:hover {
-    background-color: #700000;
-}
-.registroTitulo {
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 28px;
-    color: #900000;
-    margin-bottom: 15px;
-}
-.titulopaginaregis {
-    text-align: center;
-    color: #ffffff;
-    background-color: #d40000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 24px;
-    margin-bottom: 0px;
-    margin-top: 50px;
-}
-.formularoregis {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 0px;
 
-}
+
+/* ---- CONTENEDOR PRINCIPAL ---- */
+
 .mainlogin {
-    margin-bottom: 50px;
+    margin: 60px auto 80px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 250px;
+    gap: 120px;
+    flex-wrap: wrap;
+}
+
+
+/* ---- FORMULARIOS ---- */
+
+form {
+    background-color: #ffffff;
+    padding: 25px 28px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.18);
+    margin-top: 0;
+    width: 420px;
+    border: 2px solid #90000020;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 7px 25px rgba(0,0,0,0.28);
+}
+
+
+/* ---- ETIQUETAS ---- */
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 15px;
+}
+
+
+/* ---- CAMPOS DE TEXTO ---- */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 2px solid #cfcfcf;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #900000;
+    box-shadow: 0 0 6px #90000055;
+    outline: none;
+}
+
+
+/* ---- BOTONES ---- */
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #900000;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 5px;
+    transition: background-color .25s ease, transform .2s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #5c1a1a;
+    transform: translateY(-2px);
+}
+
+
+/* ---- REGISTRO ---- */
+
+.formularoregis {
+    background-color: #ffffff;
+    padding: 25px 28px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.18);
+    border: 2px solid #90000020;
+}
+
+.formularoregis:hover {
+    transform: scale(1.02);
+    box-shadow: 0 7px 25px rgba(0,0,0,0.28);
+}
+
+
+/* ---- RESPONSIVE ---- */
+
+@media (max-width: 900px) {
+    .mainlogin {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
 }
