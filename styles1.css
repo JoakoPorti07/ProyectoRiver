@@ -1,48 +1,103 @@
+/* ---- TÍTULO CONTACTO ---- */
+
 .contactoTitulo {
-    color: #8b2e2e;
+    color: #900000;
     font-family: 'Arial', sans-serif;
     text-align: center;
+    margin-bottom: 18px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #900000;
+    display: inline-block;
+}
+
+
+/* ---- SECCIÓN CONTENEDORA ---- */
+
+section {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px 35px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+
+/* ---- TEXTO DE INTRODUCCIÓN ---- */
+
+section p {
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    color: #333;
     margin-bottom: 20px;
 }
 
-section{
-    margin: 50px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #ffffff;
+
+/* ---- FORMULARIO ---- */
+
+form {
+    background-color: #f7f7f7;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #90000020;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-form{
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-}
 
-input[type="text"], input[type="email"], textarea {
+/* ---- CAMPOS DE TEXTO ---- */
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-input[type="submit"], input[type="reset"] {
-    background-color: #8b2e2e;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-p{
-    font-family: 'Arial', sans-serif;
+    padding: 12px 14px;
+    margin: 12px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color .25s ease, box-shadow .25s ease;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #900000;
+    box-shadow: 0 0 6px #90000055;
+    outline: none;
+}
+
+/* ---- BOTONES ---- */
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #900000;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color .25s ease, transform .2s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
     background-color: #5c1a1a;
+    transform: translateY(-2px);
 }
