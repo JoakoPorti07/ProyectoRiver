@@ -1,36 +1,106 @@
-.jugadoresTitulo{
+/* ---- TÍTULOS ---- */
+
+.jugadoresTitulo {
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
     color: #900000;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #900000;
+    display: inline-block;
+    padding-bottom: 5px;
 }
-.listadestacados {
-    padding-left: 20px;
-    font-size: 16px;
-    color: #333333;
-}
+
+
+/* ---- SECCIÓN: JUGADORES DESTACADOS ---- */
+
 .jugadoresdestacados {
-    margin: 50px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    max-width: 750px;
     background-color: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #90000020;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.jugadoresdestacados:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+}
+
+.jugadoresdestacados p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.listadestacados {
+    list-style: none;
+    padding-left: 0;
+}
+
+.listadestacados li {
+    background: #90000010;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #222;
+    font-weight: bold;
+    border-left: 5px solid #900000;
+    transition: background 0.2s ease;
+}
+
+.listadestacados li:hover {
+    background: #90000020;
+}
+
+
+/* ---- TABLA PRIMERA DIVISIÓN ---- */
+
 .tablaprimeradivision {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 35px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
 }
-.tablaprimeradivision th, .tablaprimeradivision td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-.tablaprimeradivision th {
+
+.tablaprimeradivision thead th {
     background-color: #900000;
     color: white;
-    font-weight: bold;
+    font-size: 17px;
+    padding: 14px;
+    text-align: left;
+    text-transform: uppercase;
 }
+
+.tablaprimeradivision td {
+    padding: 12px;
+    font-size: 15px;
+    color: #222;
+}
+
 .tablaprimeradivision tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
+}
+
+.tablaprimeradivision tr:hover {
+    background-color: #90000015;
+    transition: 0.2s ease;
+}
+
+.tablaprimeradivision td:first-child {
+    font-weight: bold;
+    color: #900000;
+}
+
+.tablaprimeradivision td:nth-child(3) {
+    font-weight: 600;
 }
