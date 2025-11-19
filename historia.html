@@ -6,48 +6,113 @@
     <title>RIVER PLATE - HISTORIA</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* --- Galería tipo Pinterest --- */
-        .galeria {
-            column-count: 3;
-            column-gap: 15px;
-            padding: 20px;
-        }
+        /* ---- SECCIÓN GENERAL DE HISTORIA ---- */
 
-        @media (max-width: 900px) {
-            .galeria { column-count: 2; }
-        }
+main {
+    padding: 30px;
+}
 
-        @media (max-width: 600px) {
-            .galeria { column-count: 1; }
-        }
+main h1 {
+    font-size: 32px;
+    color: #c8102e;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #c8102e;
+    display: inline-block;
+    padding-bottom: 5px;
+}
 
-        .tarjeta {
-            background: white;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            break-inside: avoid;
-        }
+main p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #222;
+    margin-bottom: 35px;
+    text-align: justify;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
 
-        .tarjeta img {
-            width: 100%;
-            display: block;
-        }
+/* ---- TÍTULO DE GALERÍA ---- */
 
-        .tarjeta p {
-            padding: 10px;
-            font-size: 14px;
-            margin: 0;
-        }
+.titulo-galeria {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #c8102e;
+    font-weight: bold;
+    border-left: 6px solid #c8102e;
+    border-right: 6px solid #c8102e;
+    padding: 5px 15px;
+    display: inline-block;
+}
 
-        .titulo-galeria {
-            text-align: center;
-            font-size: 22px;
-            margin-top: 40px;
-            color: #c8102e;
-        }
+/* ---- GALERÍA TIPO MASONRY / PINTEREST ---- */
+
+.galeria {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 20px 10px;
+}
+
+@media (max-width: 1000px) {
+    .galeria { column-count: 2; }
+}
+
+@media (max-width: 650px) {
+    .galeria { column-count: 1; }
+}
+
+/* ---- TARJETAS ---- */
+
+.tarjeta {
+    background: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    break-inside: avoid;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 2px solid #c8102e25;
+}
+
+.tarjeta:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+}
+
+/* ---- IMÁGENES ---- */
+
+.tarjeta img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #c8102e;
+}
+
+/* ---- TEXTO DE TARJETAS ---- */
+
+.tarjeta p {
+    padding: 12px;
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    background: #ffffff;
+}
+
+.tarjeta strong {
+    color: #c8102e;
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+    margin-top: 50px;
+}
+
     </style>
+
 </head>
 <body>
     <header>
