@@ -80,7 +80,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM jugadores ORDER BY dorsal ASC");
         <h2 class="jugadoresTitulo">Jugadores Primera Division</h2>
         <section>
             <!-- Formulario para agregar o editar -->
-    <form method="get" class="formulario-jugadores">
+    <form method="get" action="jugadores.php" class="formulario-jugadores">
         <?php if(isset($jugadorEditar)): ?>
             <input type="hidden" name="dorsal_viejo" value="<?php echo $jugadorEditar['dorsal']; ?>">
         <?php endif; ?>
