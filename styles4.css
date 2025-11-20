@@ -104,3 +104,42 @@
 .tablaprimeradivision td:nth-child(3) {
     font-weight: 600;
 }
+.formulario-jugadores {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #90000020;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.formulario-jugadores label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+.formulario-jugadores input[type="text"],
+.formulario-jugadores input[type="number"] {
+    width: 75%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.formulario-jugadores button[type="submit"] {
+    background-color: #900000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.formulario-jugadores button[type="submit"]:hover {
+    background-color: #b30000;
+}

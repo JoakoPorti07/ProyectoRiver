@@ -1,3 +1,47 @@
+<?php
+include("conexion.php"); // tu conexión $conn
+
+// Agregar jugador
+if(isset($_GET['agregar'])){
+    $dorsal = $_GET['dorsal'];
+    $nombre = $_GET['nombre'];
+    $posicion = $_GET['posicion'];
+
+    mysqli_query($conn, "INSERT INTO jugadores (dorsal, nombre, posicion) VALUES ('$dorsal','$nombre','$posicion')");
+    header("Location: ".$_SERVER['PHP_SELF']);
+    exit;
+}
+
+// Editar jugador
+if(isset($_GET['editar'])){
+    $dorsal = $_GET['editar'];
+    $res = mysqli_query($conn, "SELECT * FROM jugadores WHERE dorsal='$dorsal'");
+    $jugadorEditar = mysqli_fetch_assoc($res);
+}
+
+// Actualizar jugador
+if(isset($_GET['actualizar'])){
+    $dorsalViejo = $_GET['dorsal_viejo']; // necesitamos el dorsal original
+    $dorsalNuevo = $_GET['dorsal'];
+    $nombre = $_GET['nombre'];
+    $posicion = $_GET['posicion'];
+
+    mysqli_query($conn, "UPDATE jugadores SET dorsal='$dorsalNuevo', nombre='$nombre', posicion='$posicion' WHERE dorsal='$dorsalViejo'");
+    header("Location: ".$_SERVER['PHP_SELF']);
+    exit;
+}
+
+// Eliminar jugador
+if(isset($_GET['eliminar'])){
+    $dorsal = $_GET['eliminar'];
+    mysqli_query($conn, "DELETE FROM jugadores WHERE dorsal='$dorsal'");
+    header("Location: ".$_SERVER['PHP_SELF']);
+    exit;
+}
+
+// Obtener todos los jugadores
+$resultado = mysqli_query($conn, "SELECT * FROM jugadores ORDER BY dorsal ASC");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +58,7 @@
         <nav>
                 <a href="index.html" class="nav">Inicio</a>
                 <a href="historia.html" class="nav">Historia</a>
-                <a href="jugadores.html" class="nav">Jugadores</a>
+                <a href="jugadores.php" class="nav">Jugadores</a>
                 <a href="contacto.html" class="nav">Contacto</a>
                 <a href="login.html" class="nav">Socio Login</a>
         </nav>
@@ -32,18 +76,61 @@
                 <li>Hernán Crespo</li>
             </ul>
         </section>
+
         <h2 class="jugadoresTitulo">Jugadores Primera Division</h2>
         <section>
+            <!-- Formulario para agregar o editar -->
+    <form method="get" class="formulario-jugadores">
+        <?php if(isset($jugadorEditar)): ?>
+            <input type="hidden" name="dorsal_viejo" value="<?php echo $jugadorEditar['dorsal']; ?>">
+        <?php endif; ?>
+
+        <label>Dorsal:</label><br>
+        <input type="text" name="dorsal" required value="<?php echo isset($jugadorEditar) ? $jugadorEditar['dorsal'] : ''; ?>"><br><br>
+
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required value="<?php echo isset($jugadorEditar) ? $jugadorEditar['nombre'] : ''; ?>"><br><br>
+
+        <label>Posición:</label><br>
+        <input type="text" name="posicion" required value="<?php echo isset($jugadorEditar) ? $jugadorEditar['posicion'] : ''; ?>"><br><br>
+
+        <?php if(isset($jugadorEditar)): ?>
+            <button type="submit" name="actualizar">Actualizar</button>
+        <?php else: ?>
+            <button type="submit" name="agregar">Agregar</button>
+        <?php endif; ?>
+    </form>
+
+    <hr>
+
             <table class="tablaprimeradivision">
-  <thead>
-    <tr>
-      <th>Dorsal</th>
-      <th>Nombre</th>
-      <th>Posición</th>
-      <th>Nacionalidad</th>
-    </tr>
-  </thead>
-  <tbody>
+                <thead>
+                    <tr>
+                        <th>Dorsal</th>
+                        <th>Nombre</th>
+                        <th>Posición</th>
+                        <th>Nacionalidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+ <?php while($fila = mysqli_fetch_assoc($resultado)): ?>
+            <tr>
+                <td><?php echo $fila['dorsal']; ?></td>
+                <td><?php echo $fila['nombre']; ?></td>
+                <td><?php echo $fila['posicion']; ?></td>
+                <td>
+                    <a href="?editar=<?php echo $fila['dorsal']; ?>" 
+                       style="padding:5px 10px; background:#4CAF50; color:white; text-decoration:none; border-radius:4px;">
+                       Editar
+                    </a>
+                    <a href="?eliminar=<?php echo $fila['dorsal']; ?>" 
+                       onclick="return confirm('¿Seguro que querés eliminar este jugador?');"
+                       style="padding:5px 10px; background:#f44336; color:white; text-decoration:none; border-radius:4px;">
+                       Eliminar
+                    </a>
+                </td>
+            </tr>
+            <?php endwhile; ?>
 
     <!-- Arqueros -->
     <tr><td>1</td><td>Franco Armani</td><td>Arquero</td><td>Argentina</td></tr>
