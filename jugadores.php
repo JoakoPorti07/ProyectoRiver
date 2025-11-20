@@ -1,5 +1,5 @@
 <?php
-include("conexion.php"); // tu conexión $conn
+include("conexion.php");
 
 // Agregar jugador
 if(isset($_GET['agregar'])){
@@ -21,7 +21,7 @@ if(isset($_GET['editar'])){
 
 // Actualizar jugador
 if(isset($_GET['actualizar'])){
-    $dorsalViejo = $_GET['dorsal_viejo']; // necesitamos el dorsal original
+    $dorsalViejo = $_GET['dorsal_viejo'];
     $dorsalNuevo = $_GET['dorsal'];
     $nombre = $_GET['nombre'];
     $posicion = $_GET['posicion'];
